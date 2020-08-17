@@ -37,8 +37,11 @@ def verbing(s):
 
 
 def not_bad(s):
-    # your code here
-    return
+    q = s.split( "bad" )
+    w = q[0].split( "not" )
+    if len(q) > 1 < len(w):
+        return w[0] + "good" + "bad".join(q[1:])
+        return s
 
 
 # F. front_back
