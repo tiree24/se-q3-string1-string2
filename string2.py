@@ -23,9 +23,10 @@ __author__ = "???"
 
 
 def verbing(s):
-    # your code here
-    return
-
+  if len(s) >= 3:
+    if s[-3:] != 'ing': s = s + 'ing'
+    else: s = s + 'ly'
+  return s
 
 # E. not_bad
 # Given a string, find the first occurrence of the substrings
@@ -37,11 +38,11 @@ def verbing(s):
 
 
 def not_bad(s):
-    q = s.split( "bad" )
-    w = q[0].split( "not" )
-    if len(q) > 1 < len(w):
-        return w[0] + "good" + "bad".join(q[1:])
-        return s
+  n = s.find('not')
+  b = s.find('bad')
+  if n != -1 and b != -1 and b > n:
+    s = s[:n] + 'good' + s[b+3:]
+  return s
 
 
 # F. front_back
@@ -55,8 +56,26 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # your code here
-    return
+  alength = len(a)
+  blength = len(b)
+
+  if alength % 2 == 0:
+    aindex = alength // 2
+  else:
+    aindex = (alength // 2) + 1
+
+  if blength % 2 == 0:
+    bindex = blength // 2
+  else:
+    bindex = (blength // 2) + 1
+
+  afront = a[0:aindex]
+  aback = a[aindex:]
+
+  bfront = b[0:bindex]
+  bback = b[bindex:]
+
+  return afront + bfront + aback + bback
 
 
 # Provided simple test() function used in main() to print
