@@ -4,7 +4,7 @@ Kenzie assignment: String1
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__tiree__ = "I got help off the demo and did some google searches and got help on some websites and try to understand how they solve the problem."
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
